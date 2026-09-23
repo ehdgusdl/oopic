@@ -1,0 +1,11 @@
+spring:
+  datasource:
+    url: jdbc:sqlite:oopic.db
+    hikari:
+      maximum-pool-size: 1   # SQLite는 쓰기 잠금이 하나라서
+  sql:
+    init:
+      mode: always           # 시작할 때마다 schema.sql, data.sql 실행
+  mvc:
+    problemdetails:
+      enabled: true

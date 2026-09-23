@@ -1,0 +1,11 @@
+spring:
+  datasource:
+    url: "jdbc:sqlite::memory:"
+    hikari:
+      maximum-pool-size: 1   # 연결이 하나라 메모리 DB가 테스트 동안 유지된다
+  sql:
+    init:
+      mode: always
+  mvc:
+    problemdetails:
+      enabled: true
